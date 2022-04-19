@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val viewPager = findViewById<ViewPager2>(R.id.view_pager2)
+        val indicator = findViewById<DotsIndicator>(R.id.dots_indicator)
 
         var models: MutableList<String> = mutableListOf()
 
@@ -77,6 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         viewPager.setPageTransformer(transform)
 
+        indicator.setViewPager2(viewPager)
 
     }
 }

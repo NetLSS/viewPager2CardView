@@ -6,10 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="@color/gray"
+        app:dotsCornerRadius="3dp"
+        app:dotsSize="6dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="4"
+        app:layout_constraintBottom_toTopOf="@id/view_pager2"
+        app:layout_constraintEnd_toEndOf="@id/view_pager2"
+        app:layout_constraintStart_toStartOf="@id/view_pager2"
+        app:selectedDotColor="@color/gray2" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:foregroundGravity="center"
